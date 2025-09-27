@@ -16,7 +16,7 @@ const Navbar = () => {
                         <li><a>Download</a></li>
                         <li><a>Contact</a></li>
                     </ul>
-                    <button className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] font-normal rounded-sm"><i class="fa-solid fa-plus"></i> New Ticket</button>
+                    <button className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] font-normal rounded-sm"><i className="fa-solid fa-plus"></i> New Ticket</button>
                 </div>
             </div>
         </nav>

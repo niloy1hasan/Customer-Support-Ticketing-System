@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "Customer cannot log into their account using valid credentials.",
+    "customer": "Alice Johnson",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-01"
+  },
+  {
+    "id": 2,
+    "title": "Billing discrepancy",
+    "description": "Customer reports being charged twice for the same transaction.",
+    "customer": "Michael Smith",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-02"
+  },
+  {
+    "id": 3,
+    "title": "Password reset request",
+    "description": "Customer is unable to reset password via email link.",
+    "customer": "Sarah Lee",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-03"
+  },
+  {
+    "id": 4,
+    "title": "Shipping delay",
+    "description": "Customer’s order has not arrived after the estimated delivery date.",
+    "customer": "David Martinez",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-04"
+  },
+  {
+    "id": 5,
+    "title": "App crash on startup",
+    "description": "Mobile app crashes immediately after launching on Android devices.",
+    "customer": "Emily Davis",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-05"
+  },
+  {
+    "id": 6,
+    "title": "Refund request",
+    "description": "Customer is requesting a refund for a canceled service subscription.",
+    "customer": "James Wilson",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-06"
+  },
+  {
+    "id": 7,
+    "title": "Feature request",
+    "description": "Customer requests dark mode option for the web platform.",
+    "customer": "Olivia Brown",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-07"
+  },
+  {
+    "id": 8,
+    "title": "Incorrect order received",
+    "description": "Customer received the wrong product in their shipment.",
+    "customer": "Daniel Garcia",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-08"
+  },
+  {
+    "id": 9,
+    "title": "Website not loading",
+    "description": "Customer reports that the main website is not loading on desktop browsers.",
+    "customer": "Sophia Anderson",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-09"
+  },
+  {
+    "id": 10,
+    "title": "Subscription cancellation",
+    "description": "Customer needs help canceling an auto-renewal subscription.",
+    "customer": "William Thomas",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-10"
+  },
+  {
+    "id": 11,
+    "title": "Late invoice",
+    "description": "Customer did not receive the invoice for last month’s usage.",
+    "customer": "Ava Taylor",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": 12,
+    "title": "Error message during checkout",
+    "description": "Customer encounters a payment processing error when checking out.",
+    "customer": "Ethan White",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-12"
+  },
+  {
+    "id": 13,
+    "title": "Unable to update profile",
+    "description": "Customer cannot save changes to their profile settings.",
+    "customer": "Isabella Harris",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-13"
+  },
+  {
+    "id": 14,
+    "title": "Gift card not working",
+    "description": "Customer’s gift card code is being rejected during checkout.",
+    "customer": "Benjamin Clark",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2025-09-14"
+  }
+]

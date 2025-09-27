@@ -4,7 +4,7 @@ import reverseVector from '../../assets/rotate_vector1.png'
 
 const Banner = ({progressTask, resolvedList}) => {
     return (
-        <div className='w-[93%] mx-auto flex flex-col md:flex-row gap-4 mt-12 text-white'>
+        <div className='w-[93%] mx-auto flex flex-col md:flex-row gap-4 pt-12 text-white'>
             <div className='flex flex-col relative justify-center items-center py-10 bg-gradient-to-l from-[#632EE3] to-[#9F62F2] flex-1 h-[250px] rounded-lg'>
                 <img src={vector1} alt="" className=' absolute left-0'/>
                 <img src={reverseVector} alt="" className=' absolute right-0'/>

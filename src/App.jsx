@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <main className='max-w-[1600px] mx-auto'>
+      <main className='max-w-[1600px] mx-auto bg-[#F5F5F5] pb-14'>
         <Banner progressTask={progressTask} resolvedList={resolvedList}></Banner>
 
         <section className='max-w-[1600px] w-[93%] mt-8 mx-auto flex flex-col gap-6 md:flex-row'>

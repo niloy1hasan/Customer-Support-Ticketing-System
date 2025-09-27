@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-neutral py-10 mt-14">
+    <div className="bg-neutral py-10">
       <footer className="footer max-w-[1600px] w-[93%] mx-auto sm:footer-horizontal border-b border-[#FAFAFA]/10 p-10">
         <div>
           <h6 className="font-bold text-white text-[16px]">

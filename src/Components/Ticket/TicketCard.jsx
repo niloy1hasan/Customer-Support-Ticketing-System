@@ -14,7 +14,7 @@ const TicketCard = ({ ticket }) => {
             </div>
           </div>
           <p className="text-[#627382]">{ticket.description}</p>
-          <div className="flex justify-between mt-3 items-center font-medium text-[15px]">
+          <div className="flex justify-between mt-3 items-center font-medium text-[10px] md:text-[12px] xl:text-[15px]">
             <div className="flex items-center gap-3">
               <h1 className="text-[#627382]">#{ticket.id}</h1>
               <h1 className={`${ticket.priority==='HIGH PRIORITY'? "text-[#F83044]": ticket.priority==='MEDIUM PRIORITY'? "text-[#FEBB0C]" : "text-[#02A53B]"} font-semibold`}>{ticket.priority}</h1>

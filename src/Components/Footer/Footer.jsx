@@ -37,25 +37,25 @@ const Footer = () => {
           <h6 className="font-semibold text-white">Social Links</h6>
           <a className="link link-hover flex gap-2 items-center">
             <div className="w-6 h-6 bg-white rounded-full flex justify-center items-center">
-              <i className="fa-brands fa-x-twitter"></i>
+              <i className="fa-brands fa-x-twitter text-black"></i>
             </div>{" "}
             <p>@CS — Ticket System</p>
           </a>
           <a className="link link-hover flex gap-2 items-center">
             <div className="w-6 h-6 bg-white rounded-full flex justify-center items-center">
-              <i className="fa-brands fa-linkedin-in"></i>
+              <i className="fa-brands fa-linkedin-in text-black"></i>
             </div>{" "}
             <p>@CS — Ticket System</p>
           </a>
           <a className="link link-hover flex gap-2 items-center">
             <div className="w-6 h-6 bg-white rounded-full flex justify-center items-center">
-              <i className="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-facebook-f text-black"></i>
             </div>{" "}
             <p>@CS — Ticket System</p>
           </a>
           <a className="link link-hover flex gap-2 items-center">
             <div className="w-6 h-6 bg-white rounded-full flex justify-center items-center">
-              <i className="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope text-black"></i>
             </div>{" "}
             <p>support@cst.com</p>
           </a>

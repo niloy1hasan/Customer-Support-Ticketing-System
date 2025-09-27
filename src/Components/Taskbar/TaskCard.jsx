@@ -1,9 +1,10 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const TaskCard = ({task, handleProgressTask, handleResolvedTask}) => {
   const addResolved = () => {
     handleResolvedTask(task);
-    alert('Completed!');
+    toast('Completed!');
     handleProgressTask(task, false);
   }
   return (

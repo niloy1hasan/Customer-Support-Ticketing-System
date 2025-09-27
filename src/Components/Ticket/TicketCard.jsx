@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const TicketCard = ({ ticket, handleProgressTask }) => {
   const [isProgress, setIsPogress] = useState(false);
 
   const addToProgress = () => {
    if(isProgress) return;
-    alert('In Progress!');
+    toast('In Progress!');
     setIsPogress(true);
     handleProgressTask(ticket);
   }

@@ -6,6 +6,7 @@ import Ticket from './Components/Ticket/Ticket'
 import Footer from './Components/Footer/Footer'
 import TaskStatus from './Components/Taskbar/TaskStatus'
 import ResolvedTask from './Components/ResolvedTask/ResolvedTask'
+ import { ToastContainer } from 'react-toastify';
 
 const loadTicketData = async() => {
   const res = await fetch('../public/customer-tickets.json');
@@ -60,6 +61,7 @@ function App() {
       </main>
       {/* footer section */}
       <Footer></Footer>
+      <ToastContainer />
     </>
   )
 }

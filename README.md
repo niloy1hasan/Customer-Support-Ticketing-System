@@ -1,24 +1,54 @@
  ## Question & Answer
- - What is JSX, and why is it used?
+ **What is JSX, and why is it used?**
 
- ### Answer: 
+ #### Answer: 
+
+ JSX is Javascript XML. It is used in React to write HTML-like code inside Javascript.
 
  
- - What is the difference between State and Props?
+ **What is the difference between State and Props?**
 
- ### Answer: 
+ #### Answer: 
 
+State: State is used to store data that can change over time within a component.
 
- - What is the useState hook, and how does it work?
-
- ### Answer: 
-
-
- - How can you share state between components in React?
-
- ### Answer: 
+Props: Props are parameters passed to a React component to provide data.
 
 
- - How is event handling done in React?
+ **What is the useState hook, and how does it work?**
+
+ #### Answer: 
+
+ useState hook is allow to store data, change data, and notify data changed where data used.
+
+ useState function return to values.
+ - state value
+ - function for updating value
+
+ example: const [count, setCount] = useState(0);  
+
+
+ **How can you share state between components in React?**
+
+ #### Answer: 
+
+ Props drilling: 
+ Pass state value as props from a parent to child components.
+
+Lifting state up:
+Pass a function from the parent to the child as a prop. The child calls this function to send data back to the parent or update value.
+
+
+ **How is event handling done in React?**
+  #### Answer: 
+
+  1. Inline function:
+  - onClick={() => alert('message')}
+
+  2. External function:
+  - onClick={() => showAlert()}
+
+
+
 
  

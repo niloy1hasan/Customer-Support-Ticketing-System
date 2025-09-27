@@ -16,6 +16,7 @@ const loadTicketData = async() => {
 const ticketPromise = loadTicketData();
 
 function App() {
+  
   //progress state
   const [progressTask, setProgressTask] = useState([]);
   const handleProgressTask = (progress, isAdded=true) => {
@@ -38,6 +39,12 @@ function App() {
     }
   }
 
+  // removed element
+  const [removeElement, setRemoveElement] = useState([]);
+  const handleRemoveElement = (data) => {
+    setRemoveElement([...removeElement, data]);
+    }
+
   return (
     <>
       <Navbar></Navbar>
@@ -48,13 +55,13 @@ function App() {
           {/* ticket section */}
           <div className='flex-1'>
             <Suspense fallback={<span className="max-w-[1600px] mx-auto my-5 mt-10 flex justify-center loading loading-infinity loading-xl"></span>}>
-            <Ticket ticketPromise={ticketPromise} handleProgressTask={handleProgressTask}></Ticket>
+            <Ticket ticketPromise={ticketPromise} handleProgressTask={handleProgressTask} removeElement={removeElement}></Ticket>
           </Suspense>
           </div>
 
           {/* side bar section for task status and resolved task */}
           <div className='w-full md:w-[280px] lg:w-[350px]'>
-            <TaskStatus progressTask={progressTask} handleResolvedTask={handleResolvedTask} handleProgressTask={handleProgressTask}></TaskStatus>
+            <TaskStatus progressTask={progressTask} handleResolvedTask={handleResolvedTask} handleProgressTask={handleProgressTask} handleRemoveElement={handleRemoveElement}></TaskStatus>
             <ResolvedTask resolvedList={resolvedList} handleResolvedTask={handleResolvedTask}></ResolvedTask>
           </div>
         </section>

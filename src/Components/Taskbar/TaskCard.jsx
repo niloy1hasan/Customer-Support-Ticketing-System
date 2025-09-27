@@ -1,11 +1,12 @@
 import React from "react";
 import { toast } from "react-toastify";
 
-const TaskCard = ({task, handleProgressTask, handleResolvedTask}) => {
+const TaskCard = ({task, handleProgressTask, handleResolvedTask, handleRemoveElement}) => {
   const addResolved = () => {
     handleResolvedTask(task);
     toast('Completed!');
     handleProgressTask(task, false);
+    handleRemoveElement(task);
   }
   return (
     <div className="border flex flex-col gap-1.5 border-gray-700/10 rounded-lg p-2">

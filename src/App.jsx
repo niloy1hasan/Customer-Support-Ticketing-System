@@ -3,6 +3,7 @@ import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
 import Ticket from './Components/Ticket/Ticket'
+import Footer from './Components/Footer/Footer'
 
 const loadTicketData = async() => {
   const res = await fetch('../public/customer-tickets.json');
@@ -24,6 +25,7 @@ function App() {
           </Suspense>
         </section>
       </main>
+      <Footer></Footer>
     </>
   )
 }

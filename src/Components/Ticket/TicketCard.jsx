@@ -4,7 +4,7 @@ const TicketCard = ({ ticket }) => {
   console.log(ticket);
   return (
     <div>
-      <div className="card bg-base-100 card-md shadow-sm">
+      <div className="card h-full bg-base-100 card-md shadow-sm">
         <div className="card-body">
           <div className="flex justify-between items-center">
             <h2 className="card-title">{ticket.title}</h2>

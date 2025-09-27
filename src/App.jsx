@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Ticket from './Components/Ticket/Ticket'
 import Footer from './Components/Footer/Footer'
 import TaskStatus from './Components/Taskbar/TaskStatus'
+import ResolvedTask from './Components/ResolvedTask/ResolvedTask'
 
 const loadTicketData = async() => {
   const res = await fetch('../public/customer-tickets.json');
@@ -28,6 +29,7 @@ function App() {
           </div>
           <div className='w-full md:w-[280px] lg:w-[350px]'>
             <TaskStatus></TaskStatus>
+            <ResolvedTask></ResolvedTask>
           </div>
         </section>
       </main>

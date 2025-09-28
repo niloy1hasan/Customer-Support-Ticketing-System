@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
@@ -8,15 +8,29 @@ import TaskStatus from './Components/Taskbar/TaskStatus'
 import ResolvedTask from './Components/ResolvedTask/ResolvedTask'
  import { ToastContainer } from 'react-toastify';
 
-const loadTicketData = async() => {
-  const res = await fetch('../public/customer-tickets.json');
-  return res.json();
-}
-
-const ticketPromise = loadTicketData();
+// const loadTicketData = async() => {
+//   const res = await fetch('../public/customer-tickets.json');
+//   return res.json();
+// }
+// const ticketPromise = loadTicketData();
 
 function App() {
+  // ticket state
+  const [tickets, setTicket] = useState([]);
+
+  useEffect(()=>{
+    fetch('../public/customer-tickets.json')
+    .then(res => res.json())
+    .then(data => setTicket(data))
+  }, [])
+
+  const handleRemoveTicket = (removeItem) => {
+    const newTickets = tickets.filter(ticket => removeItem.id!==ticket.id);
+    setTicket(newTickets);
+  }
+
   
+
   //progress state
   const [progressTask, setProgressTask] = useState([]);
   const handleProgressTask = (progress, isAdded=true) => {
@@ -38,12 +52,7 @@ function App() {
       setResolvedList(completedList);
     }
   }
-
-  // removed element
-  const [removeElement, setRemoveElement] = useState([]);
-  const handleRemoveElement = (data) => {
-    setRemoveElement([...removeElement, data]);
-    }
+  
 
   return (
     <>
@@ -54,14 +63,15 @@ function App() {
         <section className='max-w-[1600px] w-[93%] mt-8 mx-auto flex flex-col gap-6 md:flex-row'>
           {/* ticket section */}
           <div className='flex-1'>
-            <Suspense fallback={<span className="max-w-[1600px] mx-auto my-5 mt-10 flex justify-center loading loading-infinity loading-xl"></span>}>
-            <Ticket ticketPromise={ticketPromise} handleProgressTask={handleProgressTask} removeElement={removeElement}></Ticket>
-          </Suspense>
+            { /*<Suspense fallback={<span className="max-w-[1600px] mx-auto my-5 mt-10 flex justify-center loading loading-infinity loading-xl"></span>}>
+              <Ticket ticketPromise={ticketPromise} handleProgressTask={handleProgressTask} removeElement={removeElement}></Ticket>
+            </Suspense> */}
+            <Ticket tickets={tickets} handleProgressTask={handleProgressTask}></Ticket>
           </div>
 
           {/* side bar section for task status and resolved task */}
           <div className='w-full md:w-[280px] lg:w-[350px]'>
-            <TaskStatus progressTask={progressTask} handleResolvedTask={handleResolvedTask} handleProgressTask={handleProgressTask} handleRemoveElement={handleRemoveElement}></TaskStatus>
+            <TaskStatus progressTask={progressTask} handleResolvedTask={handleResolvedTask} handleProgressTask={handleProgressTask} handleRemoveTicket={handleRemoveTicket}></TaskStatus>
             <ResolvedTask resolvedList={resolvedList} handleResolvedTask={handleResolvedTask}></ResolvedTask>
           </div>
         </section>

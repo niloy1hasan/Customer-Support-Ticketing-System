@@ -16,10 +16,10 @@ const TicketCard = ({ ticket, handleProgressTask }) => {
       <div onClick={()=> addToProgress()} className="card cursor-pointer h-full bg-base-100 card-md shadow-sm">
         <div className="card-body">
           <div className="flex justify-between items-center">
-            <h2 className="card-title">{ticket.title}</h2>
+            <h2 className="card-title flex-1">{ticket.title}</h2>
             <div className={`flex gap-2 items-center py-1.5 px-3.5 rounded-2xl ${isProgress? 'bg-[#F8F3B9]': 'bg-[#B9F8CF]'}`}>
               <div className={`h-3.5 w-3.5 rounded-full ${isProgress? 'bg-[#FEBB0C]': "bg-[#02A53B]"}`}></div>
-              <p className={`font-medium ${isProgress? 'text-[#9C7700]' : 'text-[#0B5E06]'}`}>{isProgress? "In - Progress" : ticket.status}</p>
+              <p className={`font-medium ${isProgress? 'text-[#9C7700]' : 'text-[#0B5E06]'}`}>{isProgress? "In Progress" : ticket.status}</p>
             </div>
           </div>
           <p className="text-[#627382]">{ticket.description}</p>

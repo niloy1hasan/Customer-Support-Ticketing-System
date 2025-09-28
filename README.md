@@ -42,11 +42,31 @@ Pass a function from the parent to the child as a prop. The child calls this fun
  **How is event handling done in React?**
   #### Answer: 
 
-  1. Inline function:
+1. normal function: 
+  
+function show(){
+alert('message');
+}
+
+  onClick={show}
+
+2. arrow function:
+
+  const showAlert = () => {
+    alert('message');
+  }
+
+  onClick={()=>showAlert()}
+
+3. Inline function:
   - onClick={() => alert('message')}
 
-  2. External function:
-  - onClick={() => showAlert()}
+4. with parameter:
+
+  function show(msg) {
+  alert(msg);
+}
+  - onClick={() => show('message')}
 
 
 

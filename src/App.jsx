@@ -19,7 +19,7 @@ function App() {
   const [tickets, setTicket] = useState([]);
 
   useEffect(()=>{
-    fetch('../public/customer-tickets.json')
+    fetch('./customer-tickets.json')
     .then(res => res.json())
     .then(data => setTicket(data))
   }, [])
